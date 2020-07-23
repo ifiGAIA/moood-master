@@ -482,22 +482,22 @@ const Daily = ({navigation}) => {
     //     position:"absolute",
     //     width:30,
     //     height:36.53,
-    //     marginTop:90,
-    //     right:30
+    //     marginTop:163,
+    //     left:-14
     // },
     // mood4_7:{
     //     position:"absolute",
     //     width:30,
     //     height:36.53,
     //     marginTop:90,
-    //     right:25
+    //     left:-14
     // },
     // mood5_7:{
     //     position:"absolute",
     //     width:30,
     //     height:36.53,
     //     marginTop:90,
-    //     right:20
+    //     left:30
     // },
   });
 
