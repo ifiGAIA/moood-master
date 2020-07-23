@@ -159,7 +159,7 @@ const Daily = ({navigation}) => {
     },
     dayform:{
         marginTop:35,
-        width:screenWidth*0.907,//340
+        width:screenWidth*0.906,//340
         height:screenHeight*0.5,//400
         backgroundColor:"#4E7E8C",
         borderRadius:30,
