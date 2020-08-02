@@ -1,5 +1,5 @@
 import React, { useState,useContext,useEffect }from 'react';
-import { StyleSheet, Text, View,Image,ScrollView,TouchableOpacity,TextInput,Input,AsyncStorage,Dimensions} from 'react-native';
+import { StyleSheet, Text, View,Image,ScrollView,TouchableOpacity,TextInput,AsyncStorage,Dimensions} from 'react-native';
 import beok from "../json/json.json"
 import { StoreContext } from "../stores/Store.js";
 import { Notifications } from "expo";
@@ -264,61 +264,7 @@ const Happysave = ({navigation}) => {
     width:60,
     height:50,
   },
-    // container:{
-    //     backgroundColor:"#05495D",
-    // },
-    // h1:{
-    //     flexDirection:"row",
-    //     marginLeft:20,
-    //     marginTop:50
-    // },
-    // line:{
-    //     width:2,
-    //     height:80,
-    //     backgroundColor:"#fff"
-    // },
-    // date:{
-    //     marginLeft:10,
-    //     marginTop:5
-    // },
-    // wd:{
-    //     color:"#fff",
-    //     fontWeight:"bold"
-    // },
-    // wday:{
-    //     color:"#fff",
-    //     fontSize:20,
-    //     fontWeight:"bold",
-    //     marginTop:30
-    // },
-    // line2:{
-    //     width:2,
-    //     height:40,
-    //     backgroundColor:"#fff"
-    // },
-    // why:{
-    //     marginLeft:10,
-    //     marginTop:5
-    // },
-    // h3:{
-    //     alignItems: 'center',
-    //     justifyContent: 'center',
-    //     marginTop:10
-    // },
-    // t1:{
-    //     width:320,
-    //     height:340,
-    //     backgroundColor:"#4E7E8C",
-    //     borderRadius:30,
-    //     shadowColor:"#000",
-    //     shadowOffset:{width:0,height:3},
-    //     shadowOpacity:0.2,
-    // },
-    // sbtn:{
-    //     width:137,
-    //     height:45,
-    //     marginTop:28
-    //   }
+  
   });
 
 export default Happysave;

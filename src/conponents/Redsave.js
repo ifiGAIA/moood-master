@@ -193,14 +193,7 @@ const updatefile = () =>{
                 >
                     <Image style={styles.sbtn} source={{ url: beok[1].rsave }} />
                     </TouchableOpacity>
-                    {/* <TouchableOpacity 
-                    onPress={() => {
-                        navigation.navigate("Daily");
-                        updatefile();
-                    }}
-                >
-                    <Image style={styles.sbtn} source={{ url: beok[1].rsave }} />
-                    </TouchableOpacity> */}
+                
             </View>
 
         </ScrollView>
@@ -269,68 +262,7 @@ sbtn: {
     height: 45,
     marginTop:screenHeight*0.05
 }
-  //   container: {
-  //       backgroundColor: "#05495D",
-  //   },
-  //   h1: {
-  //       flexh1: {
-  //       flexDirection: "row",
-  //       marginLeft: 20,
-  //       marginTop: 50
-  //   },
-  //   h2: {
-  //     flexh1: {
-  //     flexDirection: "row",
-  //     marginLeft: 20,
-  //     marginTop: 50
-  // },
-  //   line: {
-  //       width: 2,
-  //       height: 80,
-  //       backgroundColor: "#fff"
-  //   },
-  //   date: {
-  //       marginLeft: 10,
-  //       marginTop: 5
-  //   },
-  //   wd: {
-  //       color: "#fff",
-  //       fontWeight: "bold"
-  //   },
-  //   wday: {
-  //       color: "#fff",
-  //       fontSize: 20,
-  //       fontWeight: "bold",
-  //       marginTop: 30
-  //   },
-  //   line2: {
-  //       width: 2,
-  //       height: 40,
-  //       backgroundColor: "#fff"
-  //   },
-  //   why: {
-  //       marginLeft: 10,
-  //       marginTop: 5
-  //   },
-  //   h3: {
-  //       alignItems: 'center',
-  //       justifyContent: 'center',
-  //       marginTop: 10
-  //   },
-  //   t1: {
-  //       width: 320,
-  //       height: 340,
-  //       backgroundColor: "#4E7E8C",
-  //       borderRadius: 30,
-  //       shadowColor: "#000",
-  //       shadowOffset: { width: 0, height: 3 },
-  //       shadowOpacity: 0.2,
-  //   },
-  //   sbtn: {
-  //       width: 137,
-  //       height: 45,
-  //       marginTop: 28
-  //   }
+
 });
 
 export default Redsave;

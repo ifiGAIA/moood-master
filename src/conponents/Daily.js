@@ -1,5 +1,5 @@
-import React, { useState,useContext }from 'react';
-import { StyleSheet, Text, View,Image,ScrollView,TouchableOpacity,TextInput,Input,Button,Dimensions} from 'react-native';
+import React, { useContext }from 'react';
+import { StyleSheet, Text, View,Image,ScrollView,TouchableOpacity,Dimensions} from 'react-native';
 import beok from "../json/json.json"
 import Swiper from 'react-native-swiper'
 import {StoreContext} from "../stores/Store";
@@ -78,7 +78,7 @@ const Daily = ({navigation}) => {
              <View style={styles.moodbtn}>
              <TouchableOpacity ><Image style={styles.mood2_7} source={hh}/></TouchableOpacity>
              </View>
-             {/* <Button onPress={() => setChart({...chart, a:[]})} title="delete" /> */}
+             
              {chart.a.map(c1 => ( <View style={styles.moodbtn} key={c1}>
              <TouchableOpacity onPress={() =>navigation.navigate("Content")}><Image style={styles.mood3_7} source={{url:c1}}/></TouchableOpacity>
              </View>))}
@@ -309,196 +309,7 @@ const Daily = ({navigation}) => {
         marginTop:screenHeight*0.11,
         right:-screenWidth*0.04
     },
-    // container:{
-    //     backgroundColor:"#05495D",
-    // },
-    // wrapper:{
-    //     height:540,
-        
-    // },
-    // dotStyle:{
-    //     width:10,
-    //     height:10,
-    //     borderRadius:999,
-    //    backgroundColor:"#69929E"
-    // },
-    // activeDotStyle:{
-    //     width:10,
-    //     height:10,
-    //     borderRadius:999,
-    //     backgroundColor:"#fff"
-    // },
     
-    // date:{
-    //     width:90,
-    //     marginTop:50,
-    //     backgroundColor:"#fff",
-    //     height:30,
-    //     alignItems: 'center',
-    //     justifyContent:"center",
-    //     borderTopRightRadius:999,
-    //     borderBottomRightRadius:999
-    // },
-    // wday:{
-    //     color:"#05495D",
-    //     fontSize:16,
-    //     fontWeight:"bold",
-    //     letterSpacing:3,
-        
-    // },
-    // day:{
-    //     alignItems: 'center',
-    //     marginTop:-10
-    // },
-    // dayw:{
-    //     color:"#fff",
-    //     fontSize:50,
-    //     fontWeight:"bold",
-    // },
-    // dayform:{
-    //     marginTop:35,
-    //     width:340,
-    //     height:400,
-    //     backgroundColor:"#4E7E8C",
-    //     borderRadius:30,
-    //     flexDirection:"row",
-    //     justifyContent:"center",
-    // },
-    // form:{
-    //     width:280,
-    //     height:309,
-    //     marginTop:30
-    // },
-    // moodbtn:{
-    // alignItems: 'center',
-    // zIndex:10,
-    // },
-    // mood1_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:90,
-    //     right:118,
-    // },
-    // mood2_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:90,
-    //     right:74
-    // },
-    // mood3_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:90,
-    //     right:30
-    // },
-    // mood4_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:90,
-    //     left:30
-    // },
-    // mood5_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:163,
-    //     left:-15
-    // },
-    // mood6_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:236,
-    //     right:118,
-    // },
-    // mood7_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:236,
-    //     left:74
-    // },
-    // mood8_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:236,
-    //     left:30
-    // },
-    // mood9_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:309,
-    //     right:74,
-    // },
-    // mood10_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:309,
-    //     left:30
-    // },
-    // mood11_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:309,
-    //     left:118
-    // },
-    // mood12_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:382,
-    //     right:118,
-    // },
-    // mood13_6:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:382,
-    //     right:74
-    // },
-    // mood1_7:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:90,
-    //     right:118,
-    // },
-    // mood2_7:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:90,
-    //     right:73
-    // },
-    // mood3_7:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:163,
-    //     left:-14
-    // },
-    // mood4_7:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:90,
-    //     left:-14
-    // },
-    // mood5_7:{
-    //     position:"absolute",
-    //     width:30,
-    //     height:36.53,
-    //     marginTop:90,
-    //     left:30
-    // },
   });
 
 export default Daily;

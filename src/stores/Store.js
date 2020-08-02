@@ -54,29 +54,15 @@ const restoreState = async () => {
         console.log(state_me);
         console.log(state_chart);
         console.log(state_user);
-        // console.log('restore from context chart a: ' + chart.a);
-        // console.log('restore from phone chart a: ' + state_chart.a);
         
-       
       }
     } catch (e) {
     
     }
   };
-
-  const adjustState = async () =>{
-   try {
-    await AsyncStorage.setItem(ME_PERSISTENCE_KEY, JSON.stringify(meJson));
-    await AsyncStorage.setItem(CHART_PERSISTENCE_KEY,JSON.stringify(chartJson));
-   }
-   catch(e){
-
-   }
-  };
   
   useEffect(() => {
     restoreState();
-    // adjustState();
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import React, { useState,useContext,useEffect }from 'react';
 import { StyleSheet, Text, View,Image,TouchableOpacity,Dimensions} from 'react-native';
-import { createStackNavigator ,DrawerActions} from '@react-navigation/stack';
+import { createStackNavigator} from '@react-navigation/stack';
 import beok from "../json/json.json"
 import { TextInput } from 'react-native-gesture-handler';
 import * as firebase from "firebase";
@@ -181,129 +181,7 @@ f:{
    letterSpacing:3,
    marginTop:10
 },
-//     container:{
-//         backgroundColor:"#05495D",
-//         height:"100%"
-//     },
-//     h1:{
-//         alignItems:"center",
-//         marginTop:30
-//     },
-//     account:{
-//         color:"#fff",
-//         fontSize:18,
-//         marginRight:230,
-//         letterSpacing:3
-//     },
-//     h2:{
-//         alignItems:"center",
-//         marginTop:40
-//     },
-//     about:{
-//         color:"#fff",
-//         fontSize:18,
-//         marginRight:220,
-//         letterSpacing:3
-//     },
-//    line:{
-//        backgroundColor:"#fff",
-//        height:2,
-//        width:320,
-//        marginTop:15
-//    },
-//    bottom:{
-//     alignItems:"center"
-//    },
-//    sb:{
-//     width:120,
-//     height:60,
-//     marginTop:50,
-//    },
-//    logoutbbin:{
-//     backgroundColor:"#05495D",
-//     borderColor:"#fff",
-//     borderWidth:3,
-//     width:250,
-//     height:60,
-//     borderRadius:999,
-//     justifyContent: 'center', 
-//     alignItems: 'center',
-//     marginTop:80,
-//   },
-//   logoutw:{
-//       color:"#fff",
-//       fontSize:25,
-//       letterSpacing:2
-//   },
-//    user:{
-//     marginLeft:30,
-//     marginTop:30,
-//     flexDirection:"row"
-//    },
-//    username:{
-//        width:35,
-//        height:35
-//    },
-//    usern:{
-//     marginLeft:20
-//    },
-//    usernamew:{
-//    color:"#82A4AE",
-//    letterSpacing:3
-// },
-// email:{
-//     marginLeft:30,
-//     marginTop:30,
-//     flexDirection:"row",
-//    },
-//    mail:{
-//        width:35,
-//        height:26.25
-//    },
-//    emailn:{
-//     marginLeft:20,
-//     bottom:2
-//    },
-//    emailw:{
-//    color:"#82A4AE",
-//    letterSpacing:3
-// },
-// c:{
-//     marginLeft:30,
-//     marginTop:28,
-//     flexDirection:"row",
-//    },
-//    cc:{
-//        width:35,
-//        height:19
-//    },
-//    cn:{
-//     marginLeft:20,
-//     bottom:2
-//    },
-//    cw:{
-//    color:"#82A4AE",
-//    letterSpacing:3,
-//    marginTop:5
-// },
-// f:{
-//     marginLeft:30,
-//     marginTop:28,
-//     flexDirection:"row",
-//    },
-//    fb:{
-//        width:35,
-//        height:35
-//    },
-//    fbn:{
-//     marginLeft:20,
-//     bottom:2
-//    },
-//    fbw:{
-//    color:"#82A4AE",
-//    letterSpacing:3,
-//    marginTop:10
-// },
+
   });
 
 export default Setting;

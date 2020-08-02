@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View,Image,ScrollView,TouchableOpacity,Dimensions } from 'react-native';
+import { StyleSheet, Text, View,Image,ScrollView,Dimensions } from 'react-native';
 import beok from "../json/json.json"
 
 let screenWidth = Dimensions.get('window').width;//*
@@ -31,7 +31,7 @@ const Friends = ({navigation}) => {
          <Image style={styles.f1ph} source={{url:beok[2].f1}}/>
          <Text style={styles.f1n}>Hahapon07</Text>
          <View style={styles.m1}>
-         {/* <Image style={styles.f1m} source={{url:beok[2].angry}}/> */}
+         
          <Image style={styles.f1m} source={{url:beok[2].sad}}/>
          </View>
          </View>
@@ -40,7 +40,7 @@ const Friends = ({navigation}) => {
          <Image style={styles.f1ph} source={{url:beok[2].f1}}/>
          <Text style={styles.f1n}>Hahapon07</Text>
          <View style={styles.m1}>
-         {/* <Image style={styles.f1m} source={{url:beok[2].angry}}/> */}
+        
          <Image style={styles.f1m} source={{url:beok[2].happy}}/>
          </View>
          </View>
@@ -49,7 +49,7 @@ const Friends = ({navigation}) => {
          <Image style={styles.f1ph} source={{url:beok[2].f2}}/>
          <Text style={styles.f1n}>LILI4567</Text>
          <View style={styles.m1}>
-         {/* <Image style={styles.f1m} source={{url:beok[2].angry}}/> */}
+         
          <Image style={styles.f1m} source={{url:beok[2].happy}}/>
          </View>
          </View>
@@ -59,7 +59,7 @@ const Friends = ({navigation}) => {
          <Text style={styles.f1n}>Guoguo87</Text>
          <View style={styles.m1}>
          <Image style={styles.f1m} source={{url:beok[2].angry}}/>
-         {/* <Image style={styles.f1m} source={{url:beok[2].sad}}/> */}
+        
          </View>
          </View>
          <View style={styles.hline}></View>
@@ -143,76 +143,7 @@ const Friends = ({navigation}) => {
         marginTop:120,
         backgroundColor:"#fff"
     },
-    // container:{
-    //     backgroundColor:"#05495D",
-    //   height:"100%"
-    // },
-    // h1:{
-    //     flexDirection:"row",
-    //     marginLeft:20,
-    //     marginTop:70
-    // },
-    // line:{
-    //     width:2,
-    //     height:80,
-    //     backgroundColor:"#fff"
-    // },
-    // date:{
-    //     marginLeft:10,
-    //     marginTop:5
-    // },
-    // wd:{
-    //     color:"#fff",
-    //     fontWeight:"bold"
-    // },
-    // wday:{
-    //     color:"#fff",
-    //     fontSize:20,
-    //     fontWeight:"bold",
-    //     marginTop:20,
-    //     letterSpacing:5
-    // },
-    // h2:{
-    //     alignItems: 'center',
-    //     marginTop:50,
-    //     height:100
-    // },
-    // hline:{
-    //     backgroundColor:"#82A4AE",
-    //     height:1,
-    //     width:screenWidth*0.88,//320
-    //     marginTop:8
-    // },
-    // f1:{
-    //     flexDirection:"row",
-    //     marginTop:10
-    // },
-    // f1ph:{
-    //     width:24.54,
-    //     height:30.09,
-        
-    // },
-    // f1n:{
-    //     color:"#fff",
-    //     fontSize:15,
-    //     margin:3,
-    //     marginLeft:25,
-    //     width:screenWidth*0.25//80
-    // },
-    // m1:{
-    //     flexDirection:"row",
-    //     marginLeft:100,
-    //     width:60
-    // },
-    // f1m:{
-    //     width:24.54,
-    //     height:30.09,
-    //     marginLeft:5
-    // },
-    // b:{
-    //     marginTop:120,
-    //     backgroundColor:"#fff"
-    // },
+   
   });
 
 export default Friends;

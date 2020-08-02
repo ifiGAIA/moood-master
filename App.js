@@ -1,9 +1,7 @@
-import React, { useState,useEffect,useContext } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity,ScrollView, AsyncStorage, ActivityIndicator } from 'react-native';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
-import { createStackNavigator, DrawerActions } from '@react-navigation/stack';
-import { Input } from 'react-native-elements';
-import { navigationRef } from './RootNavigation';
+import React, { useEffect,useContext } from 'react';
+import { StyleSheet, Image, AsyncStorage } from 'react-native';
+import { NavigationContainer} from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeStack from "./src/screens/HomeStack";
 import DailyStack from "./src/screens/DailyStack";
@@ -14,14 +12,11 @@ import Redsave from "./src/conponents/Redsave";
 import Yellowsave from "./src/conponents/Yellowsave";
 import Happysave from "./src/conponents/Happysave"
 import Setting from "./src/conponents/Setting"
-import beok from "./src/json/json.json";
-import { TextInput } from 'react-native-gesture-handler';
 import { StoreProvider } from "./src/stores/Store.js"
 import * as firebase from "firebase";
 import { StoreContext } from "./src/stores/Store.js";
 import Login from "./src/conponents/Login";
 import {SplashScreen} from "expo";
-import { ImagePropTypes } from 'react-native';
 import meJson from './src/json/me.json';
 import chartJson from "./src/json/chart.json";
 
@@ -73,18 +68,7 @@ const MyTab = () => {
         labelStyle: {
           bottom: -14,//2
         },
-        // activeBackgroundColor:false,
-        // inactiveTintColor: '#838383',
-        // activeTintColor: '#05495D',
-        // style: { height: 60,width:"95%", 
-        // borderTopLeftRadius:25,
-        // borderTopRightRadius:25,
-        // left:"2.5%",
-        // position:"absolute",
-        //  },
-        // labelStyle: {
-        //   bottom: 2,
-        // },
+       
       }}>
       <Tab.Screen name="HOME" component={HomeStack} />
       <Tab.Screen name="Daily" component={DailyStack} options={{ title: "DAILY" }} />
@@ -107,8 +91,6 @@ const App = (props) => {
   const { isLoginState } = useContext(StoreContext);
   const [ isLogin, setIsLogin] = isLoginState;
   
-  const [me, setMe] = React.useState(meJson);
-  const [chart,setChart] = React.useState(chartJson);
   
   React.useEffect(() => {
     async function loadResourcesAndDataAsync() {
@@ -120,13 +102,6 @@ const App = (props) => {
         setInitialNavigationState(state);
         await AsyncStorage.setItem(ME_PERSISTENCE_KEY, JSON.stringify(meJson));
         await AsyncStorage.setItem(CHART_PERSISTENCE_KEY,JSON.stringify(chartJson));
-        // const meString = await AsyncStorage.getItem(ME_PERSISTENCE_KEY);
-        // const state_me = JSON.parse(meString);
-        // setMe(state_me);
-
-        // const chartString = await AsyncStorage.getItem(CHART_PERSISTENCE_KEY);
-        // const state_chart = JSON.parse(chartString);
-        // setChart(state_chart);
         
       } catch (e) {
 
@@ -162,7 +137,7 @@ const App = (props) => {
   } else {
     return isLogin ? (
       <NavigationContainer
-        ref={navigationRef}
+       
         initialState={initialNavigationState}
         onStateChange={(state) =>
           AsyncStorage.setItem(PERSISTENCE_KEY, JSON.stringify(state))
@@ -172,9 +147,6 @@ const App = (props) => {
         
           <Stack.Screen name="Home" component={MyTab}
             options={{
-              headerRight: () => <TouchableOpacity onPress={() => navigationRef.current?.navigate('Setting')}>
-                <Image style={styles.setting} source={{ uri: beok[0].setting }} />
-              </TouchableOpacity>,
               title: "H O M E",
               headerTintColor: '#000',
               headerStyle: { backgroundColor: '#FAF9F9' },
@@ -185,9 +157,6 @@ const App = (props) => {
           />
           <Stack.Screen name="RedButton" component={RedButton}
             options={{
-              headerRight: () => <TouchableOpacity onPress={() => navigationRef.current?.navigate('Setting')}>
-                <Image style={styles.setting} source={{ uri: beok[0].setting }} />
-              </TouchableOpacity>,
               title: false,
               headerTintColor: '#000',
               headerStyle: { backgroundColor: '#FAF9F9' },
@@ -198,9 +167,6 @@ const App = (props) => {
           />
           <Stack.Screen name="YellowButton" component={YellowButton}
             options={{
-              headerRight: () => <TouchableOpacity onPress={() => navigationRef.current?.navigate('Setting')}>
-                <Image style={styles.setting} source={{ uri: beok[0].setting }} />
-              </TouchableOpacity>,
               title: false,
               headerTintColor: '#000',
               headerStyle: { backgroundColor: '#FAF9F9' },
@@ -211,9 +177,6 @@ const App = (props) => {
           />
           <Stack.Screen name="Redsave" component={Redsave}
             options={{
-              headerRight: () => <TouchableOpacity onPress={() => navigationRef.current?.navigate('Setting')}>
-                <Image style={styles.setting} source={{ uri: beok[0].setting }} />
-              </TouchableOpacity>,
               title: false,
               headerTintColor: '#000',
               headerStyle: { backgroundColor: '#FAF9F9' },
@@ -224,9 +187,6 @@ const App = (props) => {
           />
           <Stack.Screen name="Yellowsave" component={Yellowsave}
             options={{
-              headerRight: () => <TouchableOpacity onPress={() => navigationRef.current?.navigate('Setting')}>
-                <Image style={styles.setting} source={{ uri: beok[0].setting }} />
-              </TouchableOpacity>,
               title: false,
               headerTintColor: '#000',
               headerStyle: { backgroundColor: '#FAF9F9' },
@@ -237,9 +197,6 @@ const App = (props) => {
           />
           <Stack.Screen name="Happysave" component={Happysave}
             options={{
-              headerRight: () => <TouchableOpacity onPress={() => navigationRef.current?.navigate('Setting')}>
-                <Image style={styles.setting} source={{ uri: beok[0].setting }} />
-              </TouchableOpacity>,
               title: false,
               headerTintColor: '#000',
               headerStyle: { backgroundColor: '#FAF9F9' },
@@ -260,7 +217,7 @@ const App = (props) => {
       </NavigationContainer>
     ):(
       <NavigationContainer
-      ref={navigationRef}
+      
       initialState={initialNavigationState}
       onStateChange={(state) =>
         AsyncStorage.setItem(PERSISTENCE_KEY, JSON.stringify(state))
